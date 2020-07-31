@@ -23,4 +23,3 @@ module.exports = {
 
 ### Options
 - `camelCase`: Convert CSS class tokens to camelCase. Boolean. Default: `false`
-- `test`: Test to match files against. String. Default: `"**/*.scss"`
