@@ -11,16 +11,14 @@ module.exports = function TypedSassPlugin(options) {
   options = options || {};
 
   this.apply = function (compiler) {
-    compiler.hooks.beforeRun.tapAsync("myPlugin", (compiler, callback) => {
-      const entryPath = path.join(
-        compiler.options.context,
-        compiler.options.entry
-      );
+    compiler.hooks.beforeRun.tapAsync("typed-sass-plugin", (compiler, callback) => {
+  
+      const context = compiler.options.context
       
       childprocess.exec(
         `node \
         node_modules/awesome-typed-sass-modules/lib/cli.js \
-        ${entryPath} \
+        ${context} \
         ${!!options.camelCase ? "-c": ""} \
         -p ${!!options.test ? options.test: "**/*.scss"}`,
         (error) => {
