@@ -1,0 +1,11 @@
+{
+  "name": "typed-sass-plugin",
+  "version": "1.0.0",
+  "description": "Webpack plugin for generating Typescript declaration files for .scss files",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "awesome-typed-sass-modules": "^1.2.0"
+  }
+}
