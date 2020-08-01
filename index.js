@@ -17,7 +17,7 @@ module.exports = function TypedSassPlugin(options) {
         `node \
         node_modules/awesome-typed-sass-modules/lib/cli.js \
         ${context} \
-        ${!!options.camelCase ? "-c": ""} \
+        ${!!options.camelCase ? "-c": ""}`,
         (error) => {
           callback(error);
         }
